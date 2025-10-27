@@ -31,7 +31,7 @@ C:\K8sProject
 
 ## 📝 Steps Completed
 
-### 1️⃣ Start Minikube Cluster
+## 1️⃣ Start Minikube Cluster
 ```powershell
 minikube start --driver=docker
 kubectl get nodes
