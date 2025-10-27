@@ -31,13 +31,12 @@ C:\K8sProject
 
 ## 📝 Steps Completed
 
-## 1️⃣ Start Minikube Cluster
-```powershell
+✅ Verified that the cluster is running and the control-plane node is ready.
+Start Minikube Cluster
 minikube start --driver=docker
 kubectl get nodes
-✅ Verified that the cluster is running and the control-plane node is ready.
 
-2️⃣ Create Deployment
+2️⃣ Create Deployment.yaml:
 Created deployment.yaml for Nginx with 2 replicas:
 Apply it with VS code :
 
@@ -45,8 +44,7 @@ kubectl apply -f deployment.yaml
 kubectl get pods
 📸 Screenshot: screenshots/pods.png
 
-<img width="1920" height="1080" alt="task5 1" src="https://github.com/user-attachments/assets/a2208d67-6f51-49d8-8496-5a46026ab310" />
-
+<img width="1920" height="1080" alt="task5 1" src="https://github.com/user-attachments/assets/768eac7b-6a3b-4fc6-8f98-ee674c991096" />
 
 3️⃣ Expose Deployment via Service
 Created service.yaml to expose Nginx on NodePort:
@@ -55,37 +53,39 @@ kubectl apply -f service.yaml
 kubectl get services
 📸 Screenshot: screenshots/services.png
 
-<img width="1920" height="1080" alt="task5 2" src="https://github.com/user-attachments/assets/4cba2457-6412-4476-a81c-a6e909f7a7c0" />
-
+<img width="1920" height="1080" alt="task5 2" src="https://github.com/user-attachments/assets/4a1036f5-0079-43bf-ae49-126bbfcf2964" />
 
 Open the service in browser:
 minikube service nginx-service
 🌐 Screenshot: screenshots/nginx.png
 
-<img width="1920" height="1080" alt="task5 4" src="https://github.com/user-attachments/assets/4c4f321d-b4c7-442d-8fbe-9debf8acbc30" />
+<img width="1920" height="1080" alt="task5 4" src="https://github.com/user-attachments/assets/73638361-3418-42ef-aae1-7eb3a56fa697" />
 
 
-<img width="1920" height="1080" alt="task5 3" src="https://github.com/user-attachments/assets/f20a34d3-58c7-491c-b057-1fd6676d61a4" />
-
+<img width="1920" height="1080" alt="task5 3" src="https://github.com/user-attachments/assets/00293905-15ea-4948-a7b9-374c07683677" />
 
 4️⃣ Scale Deployment
 kubectl scale deployment nginx-deployment --replicas=4
 kubectl get pods
 📸 Screenshot: screenshots/scaled.png
 
-<img width="1920" height="1080" alt="task5 5" src="https://github.com/user-attachments/assets/163fcc45-032e-4f0a-9d04-9d437a8aaac5" />
+
+<img width="1920" height="1080" alt="task5 5" src="https://github.com/user-attachments/assets/b894ad11-6ccd-4ba5-ac1a-b59b33c7a046" />
+
 
 
 5️⃣ Describe Deployment & Logs
 kubectl describe deployment nginx-deployment
 📸 Screenshot: screenshots/describe.png
 
-<img width="1920" height="1080" alt="task5 6" src="https://github.com/user-attachments/assets/98ab151d-b913-4979-a317-4804a4bf7db5" />
+<img width="1920" height="1080" alt="task5 6" src="https://github.com/user-attachments/assets/60d0aad4-4e91-47dc-bcd1-06aa6b1ee213" />
+
 
 kubectl logs <pod-name>
 📸 Screenshot: screenshots/logs.png
 
-<img width="1920" height="1080" alt="task5 7" src="https://github.com/user-attachments/assets/26f048d3-e57d-49ef-b9c5-cb942094fd72" />
+<img width="1920" height="1080" alt="task5 7" src="https://github.com/user-attachments/assets/80c30e2c-c671-404f-aebe-edeecbe3dc4f" />
+
 
 
 ✅ Summary
@@ -100,11 +100,10 @@ Scaled the deployment from 2 → 4 replicas.
 Verified cluster resources, logs, and deployment details using kubectl.
 📸 Screenshot: minikube-dashboard
 
-<img width="1920" height="1080" alt="task5 8" src="https://github.com/user-attachments/assets/caa6dec2-d734-40fb-a6d7-c1cc1be7357b" />
 
-<img width="1920" height="1080" alt="task5 9" src="https://github.com/user-attachments/assets/4a6b3ef9-cc95-4777-b12e-09d2635baa30" />
-
+<img width="1920" height="1080" alt="task5 8" src="https://github.com/user-attachments/assets/6f8961db-3216-49b0-ac1d-f7d1eff9b700" />
 
 
+<img width="1920" height="1080" alt="task5 9" src="https://github.com/user-attachments/assets/20c6d163-cf56-4dd9-a5e0-8b987d760ae8" />
 
 
